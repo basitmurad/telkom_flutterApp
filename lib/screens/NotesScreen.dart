@@ -1,31 +1,89 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class NotesScreen extends StatelessWidget {
   const NotesScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final List<String> names = [
+      'Alice',
+      'Bob',
+      'Charlie',
+      'David',
+      'Eve',
+      'Frank',
+      'Grace',
+      'Hannah',
+      'Isaac',
+      'Jack'
+    ];
     return Scaffold(
-      appBar:       AppBar(
-        backgroundColor: Colors.blue,
+      appBar: AppBar(
         centerTitle: true,
-        leading: TextButton(
-          onPressed: () {},
-          child: const Text(
-            'Edits',
-            style: TextStyle(color: Colors.white),
-          ),
+        automaticallyImplyLeading: false,
+        title: Row(
+          children: [
+            TextButton(
+              onPressed: () {},
+              child: const Row(
+                children: [
+                  Icon(
+                    Icons.arrow_back_ios,
+                    color: Colors.black,
+                  ),
+                  Text(
+                    "Back",
+                    style: TextStyle(color: Colors.black),
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              width: 60,
+            ),
+            const Text(
+              "Notes",
+              textAlign: TextAlign.center,
+            )
+          ],
         ),
-        title: const Text("Chats"),
         actions: [
           IconButton(
             onPressed: () {},
-            icon: const Icon(Icons.more_vert),
+            icon: const Icon(
+              Icons.more_vert,
+              color: Colors.black,
+            ),
           ),
         ],
       ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.max,
+        children: [
+          Padding(
+            padding: EdgeInsets.only(left: 18.0 ,top: 8 ,bottom: 8),
 
+            child: Text("All Voice Converted Lectures "),
+          ),
+          Expanded(
+            child: ListView.builder(
+              itemCount: names.length,
+              itemBuilder: (context, index) {
+                return ListTile(
+                  title: Container(
+                      color: Colors.red,
+                      padding: EdgeInsets.symmetric(vertical: 10,horizontal: 10),
+                      child: Text(names[index] ,textAlign: TextAlign.center,)),
+                );
+              },
+            ),
+          ),
+        ],
+      ),
     );
   }
 }

@@ -3,7 +3,7 @@ import 'dart:ui';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:telkom/screens/BuddyConnectorScreen.dart';
+import 'package:telkom/screens/chats/BuddyConnectorScreen.dart';
 import 'package:telkom/screens/MapScreen.dart';
 import 'package:telkom/screens/NotesScreen.dart';
 import 'package:telkom/screens/ScreenReaderScreen.dart';

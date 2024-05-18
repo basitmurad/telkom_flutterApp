@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-import 'package:telkom/screens/BuddyConnectorScreen.dart';
+import 'package:telkom/screens/chats/BuddyConnectorScreen.dart';
 
 class NavigationMenu extends StatelessWidget {
   const NavigationMenu({super.key});
@@ -36,9 +36,12 @@ class NavigationCOntroller extends GetxController {
 
   final screens = [
     const BuddyConnectorScreen(),
+
+
     Container(
       color: Colors.orange,
-    ),    Container(
+    ),
+    Container(
       color: Colors.orange,
     ),
     Container(

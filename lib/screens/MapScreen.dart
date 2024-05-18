@@ -15,9 +15,11 @@ class MapScreen extends StatelessWidget {
 
 
     return GoogleMap(
+      mapType: MapType.normal, // Set map type to normal for street view
+
       initialCameraPosition: CameraPosition(
         target: latLng,
-        zoom: 10,
+        zoom: 20,
       ),
       markers: {
         Marker(
