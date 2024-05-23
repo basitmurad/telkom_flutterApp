@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:telkom/utils/ImathPaths.dart';
@@ -9,7 +8,7 @@ class ChatScreen extends StatefulWidget {
   final String profileUrl;
 
 
-  ChatScreen({required this.chatItem, required this.profileUrl});
+  const ChatScreen({super.key, required this.chatItem, required this.profileUrl});
 
   @override
   _ChatScreenState createState() => _ChatScreenState();
@@ -30,7 +29,7 @@ class _ChatScreenState extends State<ChatScreen> {
   }
 
   void _simulateReply() {
-    Future.delayed(Duration(seconds: 1), () {
+    Future.delayed(const Duration(seconds: 1), () {
       final message = Message(text: 'Reply to: ${_messages.last.text}', isSentByMe: false);
       setState(() {
         _messages.add(message);
@@ -41,12 +40,12 @@ class _ChatScreenState extends State<ChatScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xFFD9D9D9),
+      backgroundColor: const Color(0xFFD9D9D9),
       appBar: AppBar(
         leading: Row(
           children: [
             IconButton(
-              icon: Icon(Icons.arrow_back),
+              icon: const Icon(Icons.arrow_back),
               onPressed: () {
                 // Handle back button press
               },
@@ -61,7 +60,7 @@ class _ChatScreenState extends State<ChatScreen> {
           Container(
             height: 30,
             width: 30,
-            decoration: BoxDecoration(
+            decoration: const BoxDecoration(
               shape: BoxShape.circle
 
             ),
@@ -72,7 +71,7 @@ class _ChatScreenState extends State<ChatScreen> {
           ),
 
           IconButton(
-            icon: Icon(Icons.more_vert),
+            icon: const Icon(Icons.more_vert),
             onPressed: () {
               // Handle action button press
             },
@@ -104,8 +103,8 @@ class _ChatScreenState extends State<ChatScreen> {
                           return Align(
                             alignment: message.isSentByMe ? Alignment.centerRight : Alignment.centerLeft,
                             child: Container(
-                              padding: EdgeInsets.all(10),
-                              margin: EdgeInsets.all(5),
+                              padding: const EdgeInsets.all(10),
+                              margin: const EdgeInsets.all(5),
                               decoration: BoxDecoration(
                                 color: message.isSentByMe ? Colors.blue : Colors.grey[300],
                                 borderRadius: BorderRadius.circular(10),
@@ -125,7 +124,7 @@ class _ChatScreenState extends State<ChatScreen> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(8.0),
             child: Row(
               children: [
                 Expanded(
@@ -149,7 +148,7 @@ class _ChatScreenState extends State<ChatScreen> {
                       border: Border.all(color: Colors.black, width: 2.0), // Adjust the color and width as needed
                     ),
                     child: IconButton(
-                      icon: Icon(Icons.mic_none, color: Colors.black),
+                      icon: const Icon(Icons.mic_none, color: Colors.black),
                       onPressed: () => _sendMessage(_controller.text),
                     ),
                   ),

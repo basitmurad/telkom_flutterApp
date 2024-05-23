@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class NotesScreen extends StatelessWidget {
   const NotesScreen({super.key});
@@ -64,7 +62,7 @@ class NotesScreen extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisSize: MainAxisSize.max,
         children: [
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(left: 18.0 ,top: 8 ,bottom: 8),
 
             child: Text("All Voice Converted Lectures "),
@@ -76,7 +74,7 @@ class NotesScreen extends StatelessWidget {
                 return ListTile(
                   title: Container(
                       color: Colors.red,
-                      padding: EdgeInsets.symmetric(vertical: 10,horizontal: 10),
+                      padding: const EdgeInsets.symmetric(vertical: 10,horizontal: 10),
                       child: Text(names[index] ,textAlign: TextAlign.center,)),
                 );
               },

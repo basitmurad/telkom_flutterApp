@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:telkom/screens/authentication/LoginScreeen.dart';
 import 'package:telkom/screens/homescreeen/HomeScreen.dart';
 
 void main() {
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const GetMaterialApp(
 
-      home:  HomeScreen(),
+      home:  LoginScreen(),
     );
   }
 }

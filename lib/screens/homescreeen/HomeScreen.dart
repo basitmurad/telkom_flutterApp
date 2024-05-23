@@ -1,9 +1,6 @@
-import 'dart:ui';
 
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:telkom/screens/chats/BuddyConnectorScreen.dart';
 import 'package:telkom/screens/MapScreen.dart';
 import 'package:telkom/screens/NotesScreen.dart';
 import 'package:telkom/screens/ScreenReaderScreen.dart';
@@ -44,10 +41,10 @@ class HomeScreen extends StatelessWidget {
 
               children: [
                 GestureDetector(
-                  onTap: ()=> Get.to(ScreenReaderScreen()),
+                  onTap: ()=> Get.to(const ScreenReaderScreen()),
 
                   child: Container(
-                    margin: EdgeInsets.symmetric(vertical: 10 ,horizontal: 10),
+                    margin: const EdgeInsets.symmetric(vertical: 10 ,horizontal: 10),
                     width: 135,
                     height: 120,
                     decoration: BoxDecoration(
@@ -83,9 +80,9 @@ class HomeScreen extends StatelessWidget {
                 ),
                 GestureDetector(
                   
-                  onTap: ()=> Get.to(MapScreen()),
+                  onTap: ()=> Get.to(const MapScreen()),
                   child: Container(
-                    margin: EdgeInsets.symmetric(vertical: 0 ,horizontal: 10),
+                    margin: const EdgeInsets.symmetric(vertical: 0 ,horizontal: 10),
                     width: 140,
                     height: 120,
                     decoration: BoxDecoration(
@@ -133,10 +130,10 @@ class HomeScreen extends StatelessWidget {
               GestureDetector(
                 // onTap: ()=> Get.to(BuddyConnectorScreen()),
 
-              onTap:  ()=> Get.to(()=>NavigationMenu()),
+              onTap:  ()=> Get.to(()=>const NavigationMenu()),
 
                 child: Container(
-                  margin: EdgeInsets.symmetric(horizontal: 10),
+                  margin: const EdgeInsets.symmetric(horizontal: 10),
                   width: 140,
                   height: 120,
                   decoration: BoxDecoration(
@@ -171,9 +168,9 @@ class HomeScreen extends StatelessWidget {
                 ),
               ),
               GestureDetector(
-                onTap: ()=> Get.to(NotesScreen()),
+                onTap: ()=> Get.to(const NotesScreen()),
                 child: Container(
-                  margin: EdgeInsets.symmetric(horizontal: 10),
+                  margin: const EdgeInsets.symmetric(horizontal: 10),
                   width: 140,
                   height: 120,
                   decoration: BoxDecoration(
